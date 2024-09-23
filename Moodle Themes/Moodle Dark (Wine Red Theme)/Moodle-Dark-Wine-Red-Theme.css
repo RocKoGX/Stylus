@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Dark Wine Red Theme
-@namespace      github.com
-@version        2.4.1
+@namespace      https://github.com/RocKoGX/Stylus
+@version        2.4.2
 @description    Dark and Wine Red theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -11,7 +11,7 @@
     
     body.theme-dark {
         color: #f7ebeb;
-        background: url("https://fgbg.art/static/motw_grant-8341f934bb48a8effca6c0686e6467cd.gif") no-repeat;
+        background: url("https://media1.tenor.com/m/kXo3CIJO_5gAAAAC/grant-garou-mark-of-the-wolves.gif") no-repeat;
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
@@ -1195,6 +1195,54 @@
         background-color: #3c2727;
     }
     
+    .theme-dark table th, .theme-dark table td {
+        border-color: #3f2a2a;
+    }
+    
+    .theme-dark div.editor_atto_toolbar {
+        background: #1f1212;
+    }
+    
+    .theme-dark .editor_atto_toolbar, .theme-dark .editor_atto_content_wrap, .theme-dark .editor_atto+textarea {
+        border: 1px solid #3f2a2a;
+    }
+    
+    .theme-dark div.editor_atto_toolbar div.atto_group {
+        border-color: #3f2a2a;
+    }
+    
+    .theme-dark .editor_atto_toolbar button:hover {
+        background-color: #2d1d1d;
+    }
+    
+    div.editor_atto_toolbar button:hover {
+        outline: 2px solid #cd0606b3;
+    }
+    
+    .theme-dark .fdescription.required {
+        background-color: #2d1d1d;
+    }
+    
+    #page-mod-forum-view .main-content .rui-main-content-title--h2, #page-mod-forum-post .main-content .rui-main-content-title--h2, #page-mod-forum-discuss .main-content .rui-main-content-title--h2, #user-content .main-content .rui-main-content-title--h2 {
+        color: #d4a3a3;
+    }
+    
+    .theme-dark .editor_atto_toolbar button:active, .theme-dark .editor_atto_toolbar button.highlight {
+        background-color: #af3333;
+    }
+    
+    .theme-dark .highlight {
+        color: #cd8080;
+    }
+    
+    .editor_atto_toolbar button:active .icon, .editor_atto_toolbar button.highlight .icon {
+        color: #9b0000;
+    }
+    
+    .theme-dark .editor_atto_notification .atto_info {
+        background-color: #2d1d1d;
+    }
+        
     /* ----------------------------------------------------------------- */
     /* ---------------------- LIGHT MODE */
     /* ----------------------------------------------------------------- */
@@ -1212,5 +1260,5 @@
     
     #nav-drawer {
         background-color: rgba(9, 12, 17, .8);
-    }
+    }    
 }
