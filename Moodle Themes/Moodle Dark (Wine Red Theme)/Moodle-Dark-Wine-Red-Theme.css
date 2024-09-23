@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Dark Wine Red Theme
-@namespace      https://github.com/RocKoGX/Stylus
-@version        2.4.2
+@namespace      github.com/RocKoGX/Stylus
+@version        2.5.0
 @description    Dark and Wine Red theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -1242,7 +1242,33 @@
     .theme-dark .editor_atto_notification .atto_info {
         background-color: #2d1d1d;
     }
-        
+    
+    .theme-dark .drawer-course-index {
+        background-color: #110909;
+    }
+     
+    .theme-dark .courseindex .courseindex-section {
+        background-color: #110909;
+    }
+    
+    .theme-dark .courseindex .courseindex-item:hover, .theme-dark .courseindex .courseindex-item:focus {
+        background-color: #1f1212;
+        color: #e3d0d0;
+    }
+    
+    .courseindex .courseindex-item.pageitem.courseindex-section-title {
+        background-color: #af3333;
+    }
+    
+    .courseindex .courseindex-item.courseindex-section-title:hover {
+        background-color: #af3333cc;
+    }
+    
+    .theme-dark .courseindex .courseindex-section.current {
+        color: #ffebeb;
+        background-color: #3c2727;
+    }
+    
     /* ----------------------------------------------------------------- */
     /* ---------------------- LIGHT MODE */
     /* ----------------------------------------------------------------- */
@@ -1260,5 +1286,29 @@
     
     #nav-drawer {
         background-color: rgba(9, 12, 17, .8);
-    }    
+    }
+    
+    /* ----------------------------------------------------------------- */
+    /* BREAKPOINTS */
+    /* ----------------------------------------------------------------- */
+    
+    @media (max-width: 1079.98px) {
+        .theme-dark .rui-mobile-nav-btn-close, .theme-dark .rui-mobile-nav-btn {
+            background-color: #553c3c;
+            color: #fff;
+        }
+    }
+    
+    .theme-dark #s-page-footer {
+        background-color: #2e1e1e;
+        border-color: #3f2a2a;
+        color: #e3d0d0;
+    }
+    
+    @media (max-width: 1079.98px) {
+        .theme-dark .opened .rui-topbar .rui-icon-menu {
+            background-color: #1f1212;
+        }
+    }
+    
 }
