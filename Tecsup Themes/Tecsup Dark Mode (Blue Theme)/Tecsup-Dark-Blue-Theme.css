@@ -1,0 +1,199 @@
+/* ==UserStyle==
+@name           Tecsup Dark Mode Blue Theme
+@namespace      github.com/
+@version        1.0
+@description    Dark and Blue Theme for Tecsup's Page
+@author         RocKo
+==/UserStyle== */
+
+@-moz-document url-prefix("https://tecsup.instructure.com") {
+    body {
+        background: url("https://www.fightersgeneration.com/nz8/game/garou/garou-markofthewolves-background-kevin.gif") center/cover fixed; /* Fondo personalizado */
+        color: #fff;
+    }
+    
+    .ic-Dashboard-header__layout {  /* Dashboard - cabecera*/
+        border-bottom: 1px solid #434343;
+        background: #000000d6;
+        color: #fff;
+    }
+    
+    #right-side{    /* Lado derecho de Tecsup */
+        background: #000000a1;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #00b1e2;
+        box-shadow: 0 0 20px #00b1e2;
+        width: 30vh;
+    }
+    
+    #right-side .events_list .event-details:after, #right-side .events_list .todo-details:after, #right-side .to-do-list .event-details:after, #right-side .to-do-list .todo-details:after {    /* pestañitas de lado derecho */
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #000 80%);
+    }
+    
+    #right-side h2, #right-side .h2 {   /* Borde entre el titulo y el contenido */
+        border-bottom: 1px solid #434343;
+    }
+    
+    .css-tpuo6v-text {  /* texto 1 */
+        color: rgb(194, 194, 194);
+    }
+        
+    .css-2bn4c9-view--inlineBlock-inlineListItem {  /* Texto 2 */
+        color: rgb(116, 116, 116);
+    } 
+    
+    .ic-app-header {    /* lado izquierdo */
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 54px;
+        z-index: 100;
+        background: linear-gradient(#00b1e2cc 30%, #003645d9);
+    }
+    
+    .ic-app-header__logomark-container {
+        background: transparent;
+    }
+    
+    .ic-DashboardCard { /* card abajo */
+        box-shadow: 0 0 10px #00b1e2;
+        border: 1px solid #00b2e3;
+        background: #000000d6;
+    }
+    
+    .ic-DashboardCard__header_content { /* card arriba */
+        box-sizing: border-box;
+        padding: 12px 18px 0;
+        background: #000000d6;
+    }
+    
+    .ic-DashboardCard__header-subtitle, .ic-DashboardCard__header-term {
+        color: #c8c8c8;
+    }
+    
+    .css-1gto5tw-tray, .global-nav-custom-tray {     /* pestaña de cursos */
+        background-color: rgba(0, 0, 0, .64);
+        backdrop-filter: blur(12px); /* Aplica el blur */
+    }
+    
+    .css-kryo2y-view-listItem { /* texto para pestaña de cursos */
+        color: rgb(219, 219, 219);
+    }
+    
+    * {
+        scrollbar-color: #6d6d6dd9 #000;
+    }
+    
+    #expand_collapse_all, .Button.button-sidebar-wide.Button, .ui-button, .btn {    /* boton */
+        background: radial-gradient(farthest-corner at bottom center, rgba(0, 177, 226, .7), transparent), linear-gradient(to bottom, rgba(0, 177, 226, 0.72), rgba(0, 177, 226, 0.8));
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(0, 177, 226, 0.8);
+        color: #fff;
+    }
+    
+    #expand_collapse_all:hover, .Button.button-sidebar-wide.Button:hover, .ui-button:hover, .btn:hover {    /* boton */
+        background: radial-gradient(farthest-corner at bottom center, rgba(0, 177, 226, .7), transparent), linear-gradient(to bottom, rgba(50, 203, 246, .72), rgba(50, 203, 246, .8));
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(0, 177, 226, 0.8);
+        color: #fff;
+    }
+    
+    
+    img { /* imagenes para botones verdes */
+        background: linear-gradient(#81cc22, #355111);
+        border-radius: 10px;
+    }
+    
+    .ic-sidebar-logo img{
+        background: transparent;
+    }
+
+    /* --------------------------------------- */
+    /* MODULOS */
+    /* --------------------------------------- */
+    .header-bar {   /* cabecera */
+        background-color: transparent;
+        min-height: 33px;
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .item-group-container {     /* Items de los moduos */
+        background: rgba(0, 0, 0, .6);
+    }
+    
+    .context_module_item.context_module_item_hover, .context_module_item:hover {    /* fondo molesto al pasar mouse */
+        background-color: transparent;
+    }
+    
+    .item-group-condensed .ig-header {  /* cabecera de cada item */
+        background: linear-gradient(#00b1e2, #00536b);
+        border: 1px solid #3e3e3e;
+        color: #fff;
+    }
+    
+    .item-group-condensed .ig-row { /* items de los modulos */
+        background: #0000007a;
+    }
+    
+    .ig-list .ig-row {      /* iconos */
+        color: #afafaf;
+        border: 1px solid #3e3e3e;
+    }
+    
+    .ig-list .ig-row:hover {
+        background-color: #00b1e236;
+    }
+    
+    .ig-header .name {
+        color: #ebebeb;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+    }
+    
+    .ig-list .ig-row a.ig-title {
+        color: #aeb9c1;
+        text-decoration: none;
+    }
+    
+    #breadcrumbs {  /* path del curso */
+        background-color: transparent;
+    }
+    
+    #breadcrumbs>ul>li+li:last-of-type a {  /* path del modulo */
+        color: #ccd4da;
+    }
+    
+    
+    /* --------------------------------------- */
+    /* QUIZZES */
+    /* --------------------------------------- */
+    
+    .ig-list .ig-row.ig-row-empty { /* quizz vacio */
+        border: 1px solid #3e3e3e;
+        background: rgba(0, 0, 0, .6);
+    }
+    
+    textarea, input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color], .uneditable-input {
+        background-color: #1616168f;
+        border: 1px solid #3e3e3e;
+        backdrop-filter: blur(12px); /* Aplica el blur */
+    }
+    
+    /* --------------------------------------- */
+    /* GRADES */
+    /* --------------------------------------- */
+    
+    table.summary td, table.summary tbody th {
+        border-bottom: 1px solid #6a6a6a;
+        background-color: transparent;
+    }
+    .ic-Table.ic-Table--hover-row tbody tr:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover {
+        background-color: #00b1e236;
+    }
+}
