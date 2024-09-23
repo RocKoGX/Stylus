@@ -1,20 +1,30 @@
 /* ==UserStyle==
 @name           Moodle Dark Wine Red Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        2.5.1
+@version        2.5.2
 @description    Dark and Wine Red theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://aulavirtual.ucsm.edu.pe") {  /*https://labvirtual.ucsm.edu.pe -> 2024 impar */
     /* FONDO */
-    
     body.theme-dark {
         color: #f7ebeb;
-        background: url("https://media1.tenor.com/m/kXo3CIJO_5gAAAAC/grant-garou-mark-of-the-wolves.gif") no-repeat;
-        background-attachment: fixed;
-        background-position: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    body.theme-dark::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url("https://media1.tenor.com/m/kXo3CIJO_5gAAAAC/grant-garou-mark-of-the-wolves.gif") no-repeat center center;
         background-size: cover;
+        z-index: -1;
+        pointer-events: none;
     }
 
     /* Ventanas transparentes y no transparentes */
@@ -1315,16 +1325,5 @@
         .theme-dark .drawer.drawer-right {
             background-color: #1f1212;
         }
-    }
-    
-    @media (max-width: 1199.98px) {
-        body.theme-dark {
-            color: #f7ebeb;
-            background: url("https://media1.tenor.com/m/kXo3CIJO_5gAAAAC/grant-garou-mark-of-the-wolves.gif") no-repeat;
-            background-attachment: scroll;
-            background-position: center;
-            background-size: cover;
-        }
-    }
-    
+    }    
 }
