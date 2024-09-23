@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Tecsup Dark Mode Blue Theme
-@namespace      github.com/
-@version        1.0
+@namespace      https://github.com/RocKoGX/Stylus
+@version        1.1
 @description    Dark and Blue Theme for Tecsup's Page
 @author         RocKo
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://tecsup.instructure.com") {
     body {
-        background: url("https://www.fightersgeneration.com/nz8/game/garou/garou-markofthewolves-background-kevin.gif") center/cover fixed; /* Fondo personalizado */
+        background: url("http://imgfz.com/i/I8xZKOG.gif") center/cover fixed; /* Fondo personalizado */
         color: #fff;
     }
     
@@ -89,7 +89,7 @@
         scrollbar-color: #6d6d6dd9 #000;
     }
     
-    #expand_collapse_all, .Button.button-sidebar-wide.Button, .ui-button, .btn {    /* boton */
+    #expand_collapse_all, .Button.button-sidebar-wide.Button, .ui-button, .btn, .css-1rpus1y-baseButton__content, .css-1eaecfq-baseButton__content, .css-2412vo-radioInput__facade{    /* boton */
         background: radial-gradient(farthest-corner at bottom center, rgba(0, 177, 226, .7), transparent), linear-gradient(to bottom, rgba(0, 177, 226, 0.72), rgba(0, 177, 226, 0.8));
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
         border: 1px solid rgba(0, 177, 226, 0.8);
@@ -151,7 +151,7 @@
         background-color: #00b1e236;
     }
     
-    .ig-header .name {
+    .ig-header .name {  /* texto de cabecera para cada modulo */
         color: #ebebeb;
         text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
     }
@@ -167,6 +167,11 @@
     
     #breadcrumbs>ul>li+li:last-of-type a {  /* path del modulo */
         color: #ccd4da;
+    }
+    
+    .list-view a.active {   /* pestaña color de font activa */
+        border-left: 2px solid #44656c;
+        color: #556f76;
     }
     
     
@@ -185,6 +190,63 @@
         backdrop-filter: blur(12px); /* Aplica el blur */
     }
     
+    .quiz-submission, .question_editing {   /* Fondo de examen */
+        background: #1616168f;
+        border: 1px solid #3e3e3e;
+        padding: 16px;
+        font-size: 1rem;
+    }
+    
+    #questions.assessment_results .question .header {   /* cabecera de pregunta en examen */
+        background: linear-gradient(#00b1e2, #00536b);
+    }
+    
+.question .header {
+        border-bottom: 1px solid #3e3e3e;
+    }
+    
+    .question {     /* fondo de pregunta */
+        border: 1px solid #3e3e3e;
+        background-color: #0000007a;
+    }
+    
+    .question .header .question_points_holder { /* texto de puntaje por pregunta examen */
+        color: #67deff;
+    }
+
+    .quiz_score .score_value {
+        color: #67deff;
+    }
+    
+    .description.user_content.enhanced p span{  /* quitar fondo blanco feo */
+        background: transparent !important;
+    }
+    
+    .description.user_content.enhanced p span strong{  /* resaltado las letras en negrita */
+        background: rgb(82, 71, 20) !important;
+    }
+    
+    .rubric_container .rubric_title {   /* cabecera de tablas */
+        background: linear-gradient(#00b1e2, #00536b);
+        border-top: 1px solid #3e3e3e;
+        border-left: 1px solid #3e3e3e;
+        border-right: 1px solid #3e3e3e;
+    }
+    
+    .rubric_container thead th {    /* 2da cabecera de tablas */
+        background: linear-gradient(#00b1e2, #00536b);
+    }
+    
+    .rubric_container td, .rubric_container th {    /* bordes de tablas */
+        border: 1px solid #3e3e3e;
+    }
+    
+    .module-sequence-footer .module-sequence-footer-content {   /* borde entre info y botones */
+        background: transparent;
+        border-top: 1px solid #3e3e3e;
+    }
+    
+    
     /* --------------------------------------- */
     /* GRADES */
     /* --------------------------------------- */
@@ -196,4 +258,69 @@
     .ic-Table.ic-Table--hover-row tbody tr:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover {
         background-color: #00b1e236;
     }
+    
+    /* --------------------------------------- */
+    /* IMBOX */
+    /* --------------------------------------- */
+    
+    .css-vxe90h-view--inlineBlock { /* cabecera de imbox */
+        /*color: rgb(45, 59, 69);*/
+        background: #0000007a;
+        border-color: #3e3e3e;
+    }
+    
+    .css-h5qz9v-view {  /* fondo izquierdo */
+        background-color: rgba(0, 0, 0, .64);
+        backdrop-filter: blur(12px); /* Aplica el blur */
+        border-color: #3e3e3e;
+    }
+    
+    .css-1nwvobg-view { /* bordes */
+        border-color: #3e3e3e;
+    }
+    
+    .css-oydprd-view { /* bordes */
+        border-color: #3e3e3e;
+    }
+    div.css-1nwvobg-view{   /* conversacion activa */
+        background: #002d39;
+    }
+    
+    /* --------------------------------------- */
+    /* ASSIGNMENTS */
+    /* --------------------------------------- */
+    
+    .css-6jm7bp-textInput__facade { /* barra de busqueda */
+        border: 0.0625rem solid #3e3e3e;
+        background: rgba(0, 0, 0, .81);
+    }
+    
+    .element_toggler{   /* cabecera para cada asignatura */
+        color: #ebebeb;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+    }
+    
+    /* --------------------------------------- */
+    /* SYLLABUS */
+    /* --------------------------------------- */
+    
+    #syllabus tr.date.date_passed td{   /* tabla */
+        background: rgba(0, 0, 0, .6);
+        
+    }
+    
+    /* --------------------------------------- */
+    /* OTROS */
+    /* --------------------------------------- */
+    
+    .stream_header:hover {
+        background: #00b1e236;
+    }
+    
+    .recent_activity>li {
+        position: relative;
+        border-bottom: 1px solid #3e3e3e;
+    }
+    
+
 }
