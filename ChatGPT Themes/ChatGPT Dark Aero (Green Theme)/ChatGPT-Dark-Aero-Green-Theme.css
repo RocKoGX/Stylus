@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ChatGPT Dark Aero Green Theme
 @namespace      github.com
-@version        1.8.1
+@version        1.8.2
 @description    Dark and Green Dark Frutiger Aero theme for ChatGPT
 @author         RocKo24
 ==/UserStyle== */
@@ -384,5 +384,9 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
     
     .absolute.top-\[calc\(100\%\-10px\)\].w-full.overflow-y-auto.rounded-lg.rounded-t-none.border.border-t-0.border-token-border-light.bg-token-main-surface-primary.px-3.py-2.opacity-100.translate-y-0 {  /* Explorar GPT no transparente */
       background-color: #032c18;
+    }
+    
+    .bg-gray-700 {  /* Fondo de Resultado por ChatGPT*/
+        background: #101010
     }
 }
