@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Dark Wine Red Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        2.5.0
+@version        2.4.2
 @description    Dark and Wine Red theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -1308,6 +1308,22 @@
     @media (max-width: 1079.98px) {
         .theme-dark .opened .rui-topbar .rui-icon-menu {
             background-color: #1f1212;
+        }
+    }
+    
+    @media (max-width: 1199.98px) {
+        .theme-dark .drawer.drawer-right {
+            background-color: #1f1212;
+        }
+    }
+    
+    @media (max-width: 1199.98px) {
+        body.theme-dark {
+            color: #f7ebeb;
+            background: url("https://media1.tenor.com/m/kXo3CIJO_5gAAAAC/grant-garou-mark-of-the-wolves.gif") no-repeat;
+            background-attachment: scroll;
+            background-position: center;
+            background-size: cover;
         }
     }
     
