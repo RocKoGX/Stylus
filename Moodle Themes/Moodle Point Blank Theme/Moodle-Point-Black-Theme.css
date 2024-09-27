@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Point Blank Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        1.0
+@version        1.1
 @description    Point Blank Theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -1660,7 +1660,7 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     /* ----------------------------------------------------------------- */
     
     body {  /* Fondo */
-        background: url("https://www.fightersgeneration.com/nz8/game/garou/garou-markofthewolves-background-gato3.gif");
+        background: url("http://imgfz.com/i/DJ8prVt.png");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;

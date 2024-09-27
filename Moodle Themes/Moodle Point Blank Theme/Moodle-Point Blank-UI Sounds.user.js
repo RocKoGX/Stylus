@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Point Blank UI Sounds for Moodle
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  Sonidos de la UI del juego ya extinto Point Blank
 // @author       RocKo
 // @match        https://aulavirtual.ucsm.edu.pe/*
@@ -78,7 +78,7 @@
     // .popover-region                                Boton Chat
     // .activity.activity-wrapper                     Enlaces para cada contenido de un curso
 
-    const enlaces = document.querySelectorAll(".btnlogeo, #myCoursesList .rui-sidebar-nav-item-link, .rui-flatnavigation .rui-sidebar-nav-item-link, #myCoursesBtn, .moremenu .nav-link, .rui-lang-btn, .rui-icon-menu-darkmode, #nav-notification-popover-container, .popover-region, .btn, #id_cancel, id_submitbutton, .btn-danger, .btn-msg-danger, .userpicture, #mainNav, .list-group, .btn-msg, .btn-msg-special, .content-item-container, .dropdown-item, .mod_quiz-next-nav, .questionflag, .btn .btn-secondary .btn-sm");
+    const enlaces = document.querySelectorAll(".btnlogeo, #myCoursesList .rui-sidebar-nav-item-link, .rui-flatnavigation .rui-sidebar-nav-item-link, #myCoursesBtn, .moremenu .nav-link, .rui-lang-btn, .rui-icon-menu-darkmode, #nav-notification-popover-container, .popover-region, .btn, #id_cancel, id_submitbutton, .btn-danger, .btn-msg-danger, .userpicture, #mainNav, .list-group, .btn-msg, .btn-msg-special, .content-item-container, .dropdown-item, .mod_quiz-next-nav, .questionflag, .btn .btn-secondary .btn-sm, #mobileNav");
     // Añadir el evento click a cada enlace para reproducir el sonido de clic
     enlaces.forEach(enlace => {
         if(enlace.id.startsWith("id_cancel") || enlace.classList.contains("btn-danger") || enlace.classList.contains("btn-msg-danger")){
