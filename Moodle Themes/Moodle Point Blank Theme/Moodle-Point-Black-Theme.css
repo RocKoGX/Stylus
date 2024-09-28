@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Point Blank Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        1.1
+@version        1.2
 @description    Point Blank Theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -1601,6 +1601,11 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     
     .theme-dark .courseindex .courseindex-item.pageitem {
         background: linear-gradient(to bottom, #12243f87, #1e3a6a87 55%, #1e3a6a87 60%, #12243f87);
+    }
+    
+    .theme-dark .alert-warning, .theme-dark #page-mod-choice-view #notice p, #page-mod-choice-view #notice .theme-dark p {
+        background: linear-gradient(to bottom, #96835e, #8c7955 50%, #7E6E4E 50%, #493f2b);
+        color: #FDF6EA;
     }
     
     /* ESTILOS PARA EXAMENES (VERDE = CORRECTO; ROJO = INCORRECTO) */
