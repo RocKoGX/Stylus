@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Point Blank Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        1.3
+@version        1.4
 @description    Point Blank Theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -130,8 +130,8 @@
     }
 
     .theme-dark .fp-iconview .fp-thumbnail {
-        background-color: #1f1212;
-        border-color: #3f2a2a;
+        background: linear-gradient(to bottom, #0a0a0a, #2f2f2f 35%, #070707 35%, #000000);
+        border-color: #000;
     }
 
     .theme-dark .file-picker .fp-content {
@@ -537,7 +537,7 @@
     }
 
     .theme-dark .fp-iconview .fp-filename-field .fp-filename {
-        background-color: #1f1212;
+        background-color: transparent;
         color: #fff;
     }
 
@@ -1024,8 +1024,8 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     }
     
     .theme-dark .close {
-        background-color: #2d1d1d;
-        color: #e3d0d0;
+        background-color: #1f1f1f;
+        color: #acacac;
     }
     
     .theme-dark .instancename, .theme-dark .rui-instancename {
@@ -1344,7 +1344,7 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     
     .rui-unreadcount:not(.hidden) { /* Notificacion color */
         background-color: #2c67a6;
-        color: #ebcccc;
+        color: #e3e3e3;
     }
     
     .theme-dark .gradingform_rubric .criterion.even td, .theme-dark .gradingform_rubric .criterion.odd td, .theme-dark.path-mod-assign [data-region="grade-actions-panel"], .theme-dark.path-mod-assign [data-region="grade-panel"], .theme-dark.path-mod-assign [data-region="grading-navigation-panel"], .theme-dark.path-mod-assign [data-region="grade-panel"] .fitem.has-popout.popout {
@@ -1408,8 +1408,8 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     }
     
     .theme-dark .filemanager .yui3-datatable-odd .yui3-datatable-cell {
-        background-color: #2d1d1d !important;
-        border-left: 0 solid #2d1d1d;
+        background-color: #1422324a !important;
+        border-left: 0 solid #444;
     }
     
     .theme-dark .block-timeline .rui-event-name {
@@ -1633,6 +1633,26 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     .timeremaining {
         background: linear-gradient(to bottom, #fff9ed, #fff3db 50%, #FFF1D5 50%, #857a65);
         color: #07011b !important;
+    }
+    
+    .theme-dark .errorbox {
+        background: linear-gradient(to bottom, #aa1414, #710505 50%, #680505 50%, #370606);
+        color: #feeded;
+    }
+    
+    .theme-dark .alert-info {
+        background: linear-gradient(to bottom, #7987df, #5c68b6 50%, #525ea9 50%, #36407b);
+        color: #dde1f8;
+    }
+    
+    .path-mod-assign td.submissionstatussubmitted, .path-mod-assign div.submissionstatussubmitted, .path-mod-assign a:link.submissionstatussubmitted {
+        color: #000;
+        background: linear-gradient(to bottom, #ebffeb, #dcf5dc 50%, #cfefcf 50%, #8aa48a);
+    }
+    
+    .path-mod-assign td.earlysubmission, .path-mod-assign div.earlysubmission {
+        color: #000;
+        background: linear-gradient(to bottom, #ebffeb, #dcf5dc 50%, #cfefcf 50%, #8aa48a);
     }
 
     /* ----------------------------------------------------------------- */
