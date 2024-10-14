@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Point Blank Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        1.4
+@version        1.5
 @description    Point Blank Theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -974,6 +974,7 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     
     .theme-dark .gradingsummarytable, .theme-dark .submissionsummarytable {
         border-color: #292929;
+        background-color: rgba(19, 19, 19, .8);
     }
     
     .theme-dark .maincalendar .calendarmonth ul li .event-time {
@@ -1654,13 +1655,30 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
         color: #000;
         background: linear-gradient(to bottom, #ebffeb, #dcf5dc 50%, #cfefcf 50%, #8aa48a);
     }
+    
+    .path-mod-assign td.latesubmission, .path-mod-assign a:link.latesubmission, .path-mod-assign div.latesubmission {
+        color: #000;
+        background-color: #efcfcf;
+        background: linear-gradient(to bottom, #ffe9e9, #f7dbdb 50%, #efcfcf 50%, #bb9898);
+    }
 
     /* ----------------------------------------------------------------- */
     /* ---------------------- INICIO DE SESION */
     /* ----------------------------------------------------------------- */
 
     .main .page {
-        background-image: url("https://i.pinimg.com/originals/76/20/14/76201457921b67996e8da0e9a061377d.jpg");
+        background-image: url("https://www.hdwallpapers.in/download/point_blank-HD.jpg");
+        background-size: cover;
+    }
+    
+    @media (max-width: 1079.98px) {
+        .main{
+            background: url("https://www.hdwallpapers.in/download/point_blank-HD.jpg");
+        }
+        
+        .main .page{
+            background: none;
+        }
     }
     
     .right {
