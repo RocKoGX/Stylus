@@ -117,7 +117,7 @@
         }
         // SONIDO PARA CLICKS EN HOVER
         enlace.addEventListener("mouseenter", function(e) {
-            const sonidoHover = new Audio("https://u1.padletusercontent.com/uploads/padlet-uploads/500569185/7785f908eae97527ab63d2a464988b03/PB_UI_Button_Hover_2.mp3?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZ7KIMSzRKn2FMv5xJqCzcx16O44hyfkgLqLQu0a9Ktl-H-vaI3Ef3fXQ_Rw33Zp1az9CnIdrukQEn-hYdO4PDvnFLE-Tf3AM6kDcZ4DyJbLmc25DcoDPtKd3opKg6jhQJJQg-mIMgoLDdgSspAcvygE="); // Cambia esta URL por tu archivo de sonido para el hover
+            const sonidoHover = new Audio("https://u1.padletusercontent.com/uploads/padlet-uploads/500569185/7785f908eae97527ab63d2a464988b03/PB_UI_Button_Hover_2.mp3?expiry_token=5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8EGDVBG-vnLc5ZfL_2GiKosWMOCkHArMcc8LorETHcZ7KIMSzRKn2FMv5xJqCzcx16O44hyfkgLqLQu0a9Ktl-H-vaI3Ef3fXQ_Rw33Zp1az9CnIdrukQEn-hYdO4PDvnFLE-Tf3AM6kDcZ4DyJbLmYxJyXd748nYt1D9-QDoLCQ2lbV6I3gmD3A6MywjFGg0="); // Cambia esta URL por tu archivo de sonido para el hover
             sonidoHover.play().catch((error) => {
                 console.error('Error al intentar reproducir el sonido de hover:', error);
             });
