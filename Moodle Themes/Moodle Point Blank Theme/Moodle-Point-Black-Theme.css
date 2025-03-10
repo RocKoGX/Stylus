@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Moodle Point Blank Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        1.5
+@version        1.6
 @description    Point Blank Theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://aulavirtual.ucsm.edu.pe") {  /*https://labvirtual.ucsm.edu.pe -> 2024 impar */
+@-moz-document url-prefix("https://aulavirtual.ucsm.edu.pe") {  /*https://labvirtual.ucsm.edu.pe -> 2025 par */
     /* FONDO */
     body.theme-dark {
         color: #fff;
@@ -21,7 +21,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url("http://imgfz.com/i/DJ8prVt.png") no-repeat center center;
+        background: url("https://github.com/RocKoGX/Stylus/raw/main/Moodle%20Themes/Moodle%20Point%20Blank%20Theme/backgrounds/background_night_pb.png?raw=true") no-repeat center center;
         background-size: cover;
         z-index: -1;
         pointer-events: none;
@@ -1362,6 +1362,9 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
 
     .theme-dark #responseform {
         border-color: #0f0f0f;
+        background-color: rgba(8, 8, 8, .6);
+        box-shadow: inset 0 0 3px 3px rgba(117, 117, 117, .59), inset 0 -4em 4em #0c0c0c;
+        outline: solid 3px rgba(40, 40, 40, .8);
     }
     
     :focus-visible {
@@ -1449,15 +1452,15 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     }
     
     .theme-dark div.editor_atto_toolbar {
-        background: #1f1212;
+        background: rgba(19, 19, 19, .8);
     }
     
     .theme-dark .editor_atto_toolbar, .theme-dark .editor_atto_content_wrap, .theme-dark .editor_atto+textarea {
-        border: 1px solid #3f2a2a;
+        border: 1px solid #000;
     }
     
     .theme-dark div.editor_atto_toolbar div.atto_group {
-        border-color: #3f2a2a;
+        border-color: #000;
     }
     
     .theme-dark .editor_atto_toolbar button:hover {
@@ -1658,10 +1661,31 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     
     .path-mod-assign td.latesubmission, .path-mod-assign a:link.latesubmission, .path-mod-assign div.latesubmission {
         color: #000;
-        background-color: #efcfcf;
         background: linear-gradient(to bottom, #ffe9e9, #f7dbdb 50%, #efcfcf 50%, #bb9898);
     }
-
+    
+/*
+    #quiz-timer-wrapper #quiz-timer {
+        background: linear-gradient(to bottom, #ebffeb, #dcf5dc 50%, #cfefcf 50%, #8aa48a);
+        color: #005742;
+    }
+    
+    .theme-dark .btn-light, .theme-dark .filter-actions .btn {
+        background: linear-gradient(to bottom, #0d6b09, #063a04 50%, #023500 50%, #000b00);
+        color: #fff;
+    }
+    
+    .theme-dark .btn-light:hover, .theme-dark .filter-actions .btn:hover {
+        color: #e6f5e6;
+        background: linear-gradient(to bottom, #117d0c, #085905 50%, #034e00 50%, #012400);
+    }
+*/
+    
+    .theme-dark .que .validationerror, .theme-dark .alert-danger {
+        background: linear-gradient(to bottom, #de6c6c, #c44343 50%, #B13A3A 50%, #601e1e);
+        color: #fff3f3;
+    }
+    
     /* ----------------------------------------------------------------- */
     /* ---------------------- INICIO DE SESION */
     /* ----------------------------------------------------------------- */
