@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Tecsup Dark Mode Blue Theme
 @namespace      https://github.com/RocKoGX/Stylus
-@version        1.2
+@version        1.2.1
 @description    Dark and Blue Theme for Tecsup's Page
 @author         RocKo
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://tecsup.instructure.com") {
     body {
-        background: url("http://imgfz.com/i/I8xZKOG.gif") center/cover fixed; /* Fondo personalizado */
+        background: url("https://github.com/RocKoGX/Stylus/raw/main/Tecsup%20Themes/Tecsup%20Dark%20Mode%20(Blue%20Theme)/Background/gmotw-background-kevin.gif?raw=true") center/cover fixed; /* Fondo personalizado */
         color: #fff;
     }
     
