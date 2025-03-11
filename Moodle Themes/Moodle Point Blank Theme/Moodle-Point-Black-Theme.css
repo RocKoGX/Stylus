@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Moodle Point Blank Theme
 @namespace      github.com/RocKoGX/Stylus
-@version        1.6
+@version        1.6.1
 @description    Point Blank Theme for Moodle
 @author         RocKo24
 ==/UserStyle== */
@@ -1741,7 +1741,7 @@ background: linear-gradient(to bottom, #1c2021e0, #343432e0 50%, #141414e0 50%, 
     /* ----------------------------------------------------------------- */
     
     body {  /* Fondo */
-        background: url("http://imgfz.com/i/DJ8prVt.png");
+        background: url("https://github.com/RocKoGX/Stylus/raw/main/Moodle%20Themes/Moodle%20Point%20Blank%20Theme/backgrounds/background_day_pb.png?raw=true");
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
