@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ChatGPT Dark Aero Green Theme
 @namespace      github.com
-@version        1.8.3
+@version        1.8.4
 @description    Dark and Green Dark Frutiger Aero theme for ChatGPT
 @author         RocKo24
 ==/UserStyle== */
@@ -14,8 +14,7 @@
     /* Imagen de fondo */
     
     main { 
-        background: url("https://i.pinimg.com/474x/1b/8b/21/1b8b2108c569cc98f92a526e52e88dee.jpg"); /* Green Aero */
-        /*background: url("https://www.kotaku.com.au/wp-content/uploads/2021/05/13/b6254e54236b721f392d3948ebafc211.gif?quality=75");*/ /* XBOX 360 */
+        background: url("https://github.com/RocKoGX/Stylus/raw/main/ChatGPT%20Themes/ChatGPT%20Dark%20Aero%20(Green%20Theme)/backgrounds/dark-aero-green.jpg?raw=true"); /* Green Aero */
         background-size: cover;
     }
     
@@ -383,7 +382,7 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
       background-color: #032c18
     }
     
-    .absolute.top-\[calc\(100\%\-10px\)\].w-full.overflow-y-auto.rounded-lg.rounded-t-none.border.border-t-0.border-token-border-light.bg-token-main-surface-primary.px-3.py-2.opacity-100.translate-y-0 {  /* Explorar GPT no transparente */
+    .w-full.overflow-y-auto.rounded-lg.rounded-t-none.border.border-t-0.border-token-border-light.bg-token-main-surface-primary.px-3.py-2 {  /* Explorar GPT no transparente */
       background-color: #032c18;
     }
     
