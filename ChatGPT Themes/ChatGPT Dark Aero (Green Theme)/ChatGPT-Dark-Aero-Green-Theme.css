@@ -1,57 +1,63 @@
 /* ==UserStyle==
 @name           ChatGPT Dark Aero Green Theme
 @namespace      github.com
-@version        1.8.4
+@version        2.0.0
 @description    Dark and Green Dark Frutiger Aero theme for ChatGPT
 @author         RocKo24
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://chatgpt.com/") {
     :root{
-        --text-primary: #000;
+        --text-primary: #fff;
     }
 
     /* Imagen de fondo */
-    
-    main { 
-        background: url("https://github.com/RocKoGX/Stylus/raw/main/ChatGPT%20Themes/ChatGPT%20Dark%20Aero%20(Green%20Theme)/backgrounds/dark-aero-green.jpg?raw=true"); /* Green Aero */
+    main {
+        position: relative;
+        background: url("https://github.com/RocKoGX/Stylus/raw/main/ChatGPT%20Themes/ChatGPT%20Dark%20Aero%20(Green%20Theme)/backgrounds/dark-aero-green.jpg?raw=true");
         background-size: cover;
     }
-    
-    /* Barra de envio de mensaje */
-    .dark\:shadow-none:is(.dark *) {
-        /*
-        background: linear-gradient(to bottom, #333333e3 0%, #1c1c1cde 53%, #000000db 100%);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border: 2px solid #002801ba;
-        */
-    background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #29383045 56% 56.5%, #25583d45 57% 63%, #26433355 67% 69%, #264d3855 69.5% 70%, #0002 73.5% 74%, #1e3e2d55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
-            inset 1px 0 0 rgba(255, 255, 255, 0.2), /* Borde derecho */
-            inset -1px 0 0 rgba(255, 255, 255, 0.2), /* Borde izquierdo */
-            inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
-        background-attachment: fixed;
-    }
-    
-    /* Barra de envio de mensaje para invitados*/
-    .bg-token-composer-surface {
-    background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #29383045 56% 56.5%, #25583d45 57% 63%, #26433355 67% 69%, #264d3855 69.5% 70%, #0002 73.5% 74%, #1e3e2d55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
-            inset 1px 0 0 rgba(255, 255, 255, 0.2), /* Borde derecho */
-            inset -1px 0 0 rgba(255, 255, 255, 0.2), /* Borde izquierdo */
-            inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
-        background-attachment: fixed;
-    }
-    
-    
 
-    /* Fondo al editar mensaje */
+    main::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    main > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Caja de envio de mensaje a ChatGPT (INPUT PRINCIPAL) (16-06-25) */
+    .dark\:bg-\[\#303030\]:is(.dark *) {
+    background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #29383045 56% 56.5%, #25583d45 57% 63%, #26433355 67% 69%, #264d3855 69.5% 70%, #0002 73.5% 74%, #1e3e2d55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
+            inset 1px 0 0 rgba(255, 255, 255, 0.2), /* Borde derecho */
+            inset -1px 0 0 rgba(255, 255, 255, 0.2), /* Borde izquierdo */
+            inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
+        background-attachment: fixed;
+    }
+    
+    /* Caja de envio de mensaje a ChatGPT (INPUT PRINCIPAL) pero con un fondo oscuro abajo (16-06-25) */
+    .dark\:bg-\[\#303030\]:is(.dark *)::after {
+        content: "";
+        position: absolute;
+        inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #020202 100%);
+        opacity: 0.95; /* Opcional: si quieres que se vea encima parcialmente */
+        z-index: -1; /* Asegúrate que esté por encima del fondo original */
+        pointer-events: none; /* Para que no bloquee clics si es decorativo */
+        border-radius: 28px;
+    }
+    
+      
+
+    /* Caja de editar mensaje a ChatGPT (16-06-25) */
     .bg-token-main-surface-tertiary {
-        /*background: linear-gradient(to bottom, #333333e3 0%, #1c1c1cde 53%, #000000db 100%);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border: 2px solid #002801ba;*/
         
     background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #29383045 56% 56.5%, #25583d45 57% 63%, #26433355 67% 69%, #264d3855 69.5% 70%, #0002 73.5% 74%, #1e3e2d55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
@@ -60,44 +66,68 @@
             inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
         background-attachment: fixed;
     }
-    
-    .bg-thread--footer {
-        background: transparent;
-    }
-    
-    .bg-thread--header{
-        background: transparent;
-    }
-    
+
     /* Barra superior */
-    .bg-token-main-surface-primary {
+    #page-header {
         /*background: transparent;*/
-background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #3f7d5c45 57% 63%, #3f7d5c55 67% 69%, #3f7d5c55 69.5% 70%, #0002 73.5% 74%, #2a443655 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
+    background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #3f7d5c45 57% 63%, #3f7d5c55 67% 69%, #3f7d5c55 69.5% 70%, #0002 73.5% 74%, #2a443655 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
+                inset 1px 0 0 rgba(255, 255, 255, 0.2), /* Borde derecho */
+                inset -1px 0 0 rgba(255, 255, 255, 0.2), /* Borde izquierdo */
+                inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
+    }
+    
+
+    /* Fondo izquierdo (16-06-25) */
+    .bg-token-bg-elevated-secondary {
+        /*background: url("https://github.com/j0nat/Windows-Live-Messenger/blob/master/WLMClient/Content/Interface/chatWindowTopBar.png?raw=true");*/
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #020202 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    /* Fondo derecho para referencia (16-06-25) */
+    .bg-token-sidebar-surface-primary .bg-token-bg-primary {
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #020202 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    th.bg-token-main-surface-primary {
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #020202 100%);
+    }
+    
+    /* Fondo para ver imagenes creadas por ChatGPT (16-06-25) */
+    div[data-testid="modal-image-gen-lightbox"]  {
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #020202 100%);
+    }
+    
+    /* Barra superior al mostrar referencia (cuadro) */
+    .dark\:bg-token-main-surface-tertiary:is(.dark *) {
+        background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #3f7d5c45 57% 63%, #3f7d5c55 67% 69%, #3f7d5c55 69.5% 70%, #0002 73.5% 74%, #2a443655 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
             inset 1px 0 0 rgba(255, 255, 255, 0.2), /* Borde derecho */
             inset -1px 0 0 rgba(255, 255, 255, 0.2), /* Borde izquierdo */
             inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
     }
-
-    /* Fondo izquierdo  */
-    .bg-token-sidebar-surface-primary {
-        /*background: url("https://github.com/j0nat/Windows-Live-Messenger/blob/master/WLMClient/Content/Interface/chatWindowTopBar.png?raw=true");*/
+    
+    /* Parte inferior al mostrar referencia (cuadro) */
+    .dark\:bg-token-main-surface-secondary:is(.dark *) {
         background: linear-gradient(to bottom, #141414 0%, #131313 53%, #000 100%);
-        background-size: cover;
-        background-repeat: no-repeat;
     }
     
-    /* Eliminar las barras/fondo de Fechas de chats que son innecesarios */
-    div.sticky.top-0.z-20.bg-token-sidebar-surface-primary{
-        /*background: transparent;*/
-        background: #1c1c1c;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(23, 23, 23, .8);
+    /* Hover al buscar un chat */
+    .cursor-pointer .dark\:bg-token-main-surface-secondary:is(.dark *) {
+        background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #0f75;
     }
+
+
+    /* Conversacion seleccionada en la parte izquierda (16-06-25) */
     
-    /* Conversacion seleccionada en la parte izquierda */ /* DISABLED 8-02-2025 */
-    /*
-    .bg-token-sidebar-surface-secondary {
+    .__menu-item:not(:disabled):not([data-disabled]):active:not(:has([data-trailing-button]:hover)), .__menu-item:not(:disabled):not([data-disabled])[data-active] {
         background-color: rgba(0, 128, 81, 0.8);
         background: radial-gradient(farthest-corner at bottom center, rgba(29, 196, 82, .7), transparent), linear-gradient(to bottom, rgba(0, 100, 81, 0.72), rgba(0, 128, 81, 0.8));
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -105,11 +135,12 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         color: rgb(255, 255, 255);
         position: relative;
         text-shadow: 0 2px 0.5em #0003
-    }*/
+    }
     
-    /* Hover al intentar seleccionar una conversacion */
-    @media (hover: hover) and (pointer: fine) {
-        .hover\:bg-token-sidebar-surface-secondary:hover {
+   
+    /* Hover al intentar seleccionar una conversacion (16-06-25) */
+    @media (hover: hover) {
+        .__menu-item:not(:disabled):not([data-disabled]):hover {
             background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
             text-decoration: none;
             outline: solid thin rgba(0, 0, 0, .5);
@@ -117,47 +148,6 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         }
     }
     
-    /* Mantener seleccionado una opcion por ejemplo conectar drive */
-    .dark\:radix-state-open\:bg-token-main-surface-secondary[data-state=open]:is(.dark *) {
-            background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
-            text-decoration: none;
-            outline: solid thin rgba(0, 0, 0, .5);
-            box-shadow: inset 0 0 0 1px #0f75;
-    }
-    
-    /* Opciones que ofrece el mensaje enviado por ChatGPT como audio, copiar, dislike y tipo*/
-    @media (min-width: 768px) {
-        .md\:border {
-            border-width: 1px;
-            background: linear-gradient(to bottom, #ffffff40, #fff6 50%, #ffffff40 50%, #ffffff1a);
-            text-decoration: none;
-            box-shadow: inset 0 0 0 1px #0f75; 
-        }
-    }
-    
-    /* Hover para seleccionar una opcion de lo anterior */
-    @media (hover: hover) and (pointer: fine) {
-        .hover\:bg-token-main-surface-secondary:hover {
-            background-color: rgba(0, 128, 81, 0.8); /* Verde oscuro con algo de transparencia */
-            background: radial-gradient(farthest-corner at bottom center, rgba(29, 196, 82, .7), transparent), linear-gradient(to bottom, rgba(0, 100, 81, 0.72), rgba(0, 128, 81, 0.8));
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(0, 128, 81, 0.8);
-            color: rgba(255, 255, 255, .8); /* Texto en verde oscuro */
-            position: relative;
-            text-shadow: 0 2px 0.5em #0003; /* Sombra del texto en negro suave */
-        }
-    }
-    
-    /* Hover para seleccionar una opcion de menus*/
-    @media (hover: hover) and (pointer: fine) {
-        .dark\:hover\:bg-token-main-surface-secondary:hover:is(.dark *) {
-            background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
-            text-decoration: none;
-            outline: solid thin rgba(0, 0, 0, .5);
-            box-shadow: inset 0 0 0 1px #0f75;
-        }
-    }
-
     
     /* CHATGPT Messages Fonts */
     .dark .dark\:prose-invert {
@@ -176,39 +166,10 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
     
-    /* Fonts */
-    .text-token-text-primary {
-         color: #fff; 
-    }
+ 
     
-    .text-token-text-secondary {
-        color: #d3d3d3;
-    }
-    
-    
-    .text-token-text-quaternary {
-        color: #d3d3d3;
-    }
-    
-    .btn-secondary {
-        color: #fff;
-    }
-    
-    .dark .btn-primary {
-        color: #fff;
-    }
-    
-    .dark .dark\:text-gray-500 { /* font de recomendaciones que ofrece ChatGPT */
-        --tw-text-opacity: 1;
-        color: #fffc;
-    }
-    
-    /* Iconos estilo Frutiger Aero*/
+    /* ==========|| Iconos estilo Frutiger Aero para botones en GENERAL ||========== */
     button, input:where([type=button]), input:where([type=reset]), input:where([type=submit]) {
-        /*background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
-        text-decoration: none;
-        outline: solid thin rgba(0, 0, 0, .5);
-        box-shadow: inset 0 0 0 1px #0f75;*/
         background-color: rgba(0, 128, 81, 0.8); /* Verde oscuro con algo de transparencia */
         background: radial-gradient(farthest-corner at bottom center, rgba(29, 196, 82, .7), transparent), linear-gradient(to bottom, rgba(0, 100, 81, 0.72), rgba(0, 128, 81, 0.8));
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -216,76 +177,71 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         color: rgba(255, 255, 255, .8); /* Texto en verde oscuro */
         position: relative;
         text-shadow: 0 2px 0.5em #0003; /* Sombra del texto en negro suave */
+        border-radius: 8px;
     }
     
-    /* Boton de Explorar GPT */
-    button.flex.h-10.w-full.items-center{
-        background: transparent;
-        border: transparent;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, .17);
+    /* Botones para la ista de configuración (16-06-25) */
+    div[role="tablist"] button{
+        background: none;
+        box-shadow: none;
+        border: none;
     }
     
-    /* Botoncito de opciones */
-    button.flex.items-center.justify-center.text-token-text-secondary.transition{
-        background: transparent;
-        border: transparent;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, .17);
+    /* Boton de tres puntos en chat transparente */
+    button[class="__menu-item-trailing-btn"]{
+        background: none;
+        box-shadow: none;
+        border: none;
     }
     
-    /* Hover al seleccionar Explorar GPT */
-    button.flex.h-10.w-full.items-center:hover{
-            background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
-            text-decoration: none;
-            outline: solid thin rgba(0, 0, 0, .5);
-            box-shadow: inset 0 0 0 1px #0f75;
+    /* Boton de tres puntos en chat transparente */
+    button[class="w-full"]{
+        background: none;
+        box-shadow: none;
+        border: none;
     }
     
-    /* Boton de Copiar codigo*/
-    /* button.text-token-text-secondary --> para botones como like dislike*/
+    
+    /* Boton de Copiar codigo transparente (16-06-25) */
     button.flex.gap-1.items-center {
         background: transparent;
         border: transparent;
         box-shadow: 0 4px 4px rgba(0, 0, 0, .17);
     }
     
-    /* Boton Rojo */
+    button[data-testid="profile-button"]{
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+    
+    /* Botones Rojo para indicar peligro */ 
     button.btn.relative.btn-danger-outline, button.btn.relative.btn-danger{
-        background-color: rgba(128, 0, 0, .8); /* Verde oscuro con algo de transparencia */
+        background-color: rgba(128, 0, 0, .8);
         background: radial-gradient(farthest-corner at bottom center, rgba(196, 29, 29, .7), transparent), linear-gradient(to bottom, rgba(100, 0, 0, .72), rgba(128, 0, 0, .8));
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
         border: 1px solid rgba(128, 0, 0, .8);
-        color: rgba(255, 255, 255, .8); /* Texto en verde oscuro */
+        color: rgba(255, 255, 255, .8);
         position: relative;
-        text-shadow: 0 2px 0.5em #0003; /* Sombra del texto en negro suave */
+        text-shadow: 0 2px 0.5em #0003;
+    }
+    
+    /* Botón para cancelar mensaje al editar */
+    .flex.justify-end.gap-2 .btn.relative.btn-secondary{
+        background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #0f75;
     }
 
-    .dark\:disabled\:text-token-main-surface-secondary:disabled:is(.dark *) {
-        color: #fff;
-    }   
 
     /* Color de codigo generado */
     code {
         background: linear-gradient(to bottom, #003300b0, #004d00b0 50%, #004d00b0 50%, #002200fc);
     }
 
-    /* Footer Styling */
-    /*footer {
-        background: linear-gradient(45deg, #000000, #1a1a1a);
-        color: #66ff66;
-        border-top: 2px solid #66ff66;
-    }*/
-
-    /* Highlighted Text */
-    /*mark {
-        background-color: #ffcc00;
-        color: #000000;
-    }*/
-
-    /* Eliminar sombreado innecesario en la parte izquierda al seleccionar los tres puntos */
-    .ltr\:bg-gradient-to-l:where([dir=ltr],[dir=ltr] *) {
-        background: transparent;
-    }
-    
+   
+   
     /* Alerta que dice "Es util esta conversacion..." */
     .dark .dark\:border-gray-700 {
         --tw-border-opacity: 1;
@@ -295,36 +251,18 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
             box-shadow: inset 0 0 0 1px #0f75;
     }
     
-    /* Codigo generado por ChatGPT - Barra superior */
-    .bg-token-main-surface-secondary {
-    background-color: rgba(34, 84, 66, 0.8); /* Verde #225442 con algo de transparencia */
-    background: radial-gradient(farthest-corner at bottom center, rgba(34, 84, 66, 0.7), transparent), 
-                linear-gradient(to bottom, rgba(25, 60, 48, 0.72), rgba(34, 84, 66, 0.8));
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(34, 84, 66, 0.8);
-    color: rgba(255, 255, 255, .8); /* Texto en verde oscuro */
-    position: relative;
-    text-shadow: 0 2px 0.5em #0003; /* Sombra del texto en negro suave */
-    }
-    
-    /* Hover al indicar like o dislike a mensaje generado por ChatGPT */
-    @media (hover: hover) and (pointer: fine) {
-        .hover\:text-token-text-primary:hover {
-            color: #b2b2b2;
-        }
-    }
-
-    /* Boton blanco "crear" */
-    .dark .btn-primary {
-        border-width: 1px;
-        background: linear-gradient(to bottom, #ffffff40, #fff6 50%, #ffffff40 50%, #ffffff1a);
+  
+     /* Explorar GPT: Cuadros de "Destacado" (16-06-25) */
+    .dark .dark\:bg-gray-700 {
+        background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
         text-decoration: none;
-        box-shadow: inset 0 0 0 1px #81818180;
-        color: #fff;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #0f75;
     }
     
-    @media (hover: hover) and (pointer: fine) {
-        .btn-primary:hover:is(.dark *) {
+    /* Explorar GPT: Hover para cuadros de "Destacado" (16-06-25) */
+    @media (hover: hover) {
+        .hover\:bg-token-main-surface-secondary:hover {
             background: linear-gradient(to bottom, #3f7d5c55, #9addb955 50%, #3f7d5c55 50%, #3f7d5c55);
             text-decoration: none;
             outline: solid thin rgba(0, 0, 0, .5);
@@ -332,36 +270,6 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         }
     }
     
-    /* Explorar GPT: Gradiente en flechita DER */
-    [dir=ltr] .bg-gradient-to-l {
-        background: transparent;
-    }
-    
-    /* Gradiente en flechita IZQ */
-    [dir=ltr] .bg-gradient-to-r, [dir=rtl] .bg-gradient-to-l {
-        background: transparent;
-    }
-
-    /* Explorar GPT: Opcion seleccionada */
-    @media (min-width: 768px) {
-        .dark .dark\:md\:bg-transparent {
-            color: #ffffffde;
-        }
-    }
-    
-     /* Explorar GPT: Cuadros de "Destacado" */
-    .dark .dark\:bg-gray-700 {
-        background-color: #45454557
-    }
-    
-    .decoration-token-text-primary {    /* font subrayado de negro a blanco*/
-        text-decoration-color: #fff;
-    }
-    
-    .dark\:border-gray-700:is(.dark *) {     /* bordes molestos  cuando dice que es util */
-        --tw-border-opacity: 1;
-        border-color: transparent;
-    }
     
     .dark\:text-token-text-tertiary:is(.dark *) {   /* font de referencias p1 */
         color: #189759;
@@ -378,13 +286,10 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         color: #07e779;
     }
     
-    .popover {  /* popups no transparentes */
-      background-color: #032c18
+    .popover {  /* Fondo para los popups */
+      background: linear-gradient(to bottom, #141414 0%, #131313 53%, #000 100%);
     }
     
-    .w-full.overflow-y-auto.rounded-lg.rounded-t-none.border.border-t-0.border-token-border-light.bg-token-main-surface-primary.px-3.py-2 {  /* Explorar GPT no transparente */
-      background-color: #032c18;
-    }
     
     .bg-token-message-surface{      /* Mensaje que envío a chatgpt */
     background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #29383045 56% 56.5%, #25583d45 57% 63%, #26433355 67% 69%, #264d3855 69.5% 70%, #0002 73.5% 74%, #1e3e2d55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
@@ -395,7 +300,34 @@ background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-g
         background-attachment: fixed;
     }
     
-    .bg-gray-700 {  /* Fondo de Resultado por ChatGPT*/
-         background: #101010
+    .bg-token-sidebar-surface-primary {  /* Fondo de Resultado en Codigo por ChatGPT (16-06-25) */
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #000 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
      }
+    
+    .relative.flex.w-full.items-end.py-3.pl-3 { /* borde de mensaje para chatear con gpt mejorado (25.03.25 */
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    /* Botoncitos pequeños para redirigir a la referencia */
+    .dark\:bg-\[\#303030\]\!:is(.dark *) {
+        background: linear-gradient(to bottom, #0f411e 0%, #0a2518 53%, #000e08 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    /* Fondo para planes de ChatGPT */
+    .dark\:bg-\[\#353535\]:is(.dark *) {
+        background: linear-gradient(to bottom, #141414 0%, #131313 53%, #000 100%);
+    }
+    
+    header[data-landing-page-load-target="true"]{
+    background: linear-gradient(135deg, #3f7d5c55 70px, transparent 100px), linear-gradient(225deg, #3f7d5c55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #355b4755 44% 45%, #355b4755 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #3f7d5c45 57% 63%, #3f7d5c55 67% 69%, #3f7d5c55 69.5% 70%, #0002 73.5% 74%, #2a443655 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #355b4755 90%) 0 / 100vw 100vh no-repeat fixed;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Borde inferior */
+                inset 1px 0 0 rgba(255, 255, 255, 0.2), /* Borde derecho */
+                inset -1px 0 0 rgba(255, 255, 255, 0.2), /* Borde izquierdo */
+                inset 0 -1px 0 rgba(255, 255, 255, 0.2); /* Borde superior */
+    }
+    
 }
