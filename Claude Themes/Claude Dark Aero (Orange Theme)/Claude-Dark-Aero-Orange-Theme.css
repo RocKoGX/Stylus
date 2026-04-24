@@ -1,0 +1,255 @@
+/* ==UserStyle==
+@name           Claude Dark Aero Orange Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Dark and Orange Dark Aero theme for Claude
+@author         RocKo24
+==/UserStyle== */
+
+@-moz-document url-prefix("https://claude.ai/") {
+    
+    /* ── Textos resaltados de Claude ──────────────────────────────── */
+    .text-danger-000 {
+        color: hsl(24, 79%, 68%);
+    }
+    
+    /* ── Background principal ──────────────────────────────── */
+    #main-content{
+        position: relative;
+        background: url("https://i.redd.it/over-50-frutiger-aero-wallpapers-2008ify-your-pc-v0-3gtz3vc2nz9b1.jpg?width=3840&format=pjpg&auto=webp&s=bf357f82a54e983ab3acc37bb9c8ea51e6489148");
+        background-size: cover;
+        z-index: 1;
+    }
+    
+    /* — Oscurecer Background — */
+    #main-content::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: #00000057 !important;
+        background-size: cover !important;
+        z-index: -1;
+    }
+    
+    /* ── Mensajes a Claude ──────────────────────────────── */
+    div[data-user-message-bubble="true"]{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(5px) saturate(120%);
+    }
+
+    
+    /* ── Código o texto agrupado ──────────────────────────────── */
+    div[role="group"]{
+        background: linear-gradient(to bottom, #141414c4 0%, #131313a6 53%, #020202a3 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    /* ── Opciones para mensajes (copiar, feedback, regenerar, ) ──────────────────────────────── */
+    div[role="group"][aria-label="Message actions"] {
+        background: #fff0;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    /* ── Miniaturas de códigos o archivos mandados ──────────────────────────────── */
+    div[data-testid="file-thumbnail"] .shadow-always-black\/5{
+        background: linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+    }
+    
+    /* ── Barra superior principal ──────────────────────────────── */
+    header[data-testid="page-header"]{
+        background: linear-gradient(135deg, #79797955 70px, transparent 100px), linear-gradient(225deg, #7a7a7a55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #56565655 44% 45%, #59595955 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #6c6c6c45 57% 63%, #78787855 67% 69%, #76767655 69.5% 70%, #0002 73.5% 74%, #3f3f3f55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #5c5c5c55 90%) 0 / 100vw 100vh no-repeat fixed;
+        backdrop-filter: blur(10px) saturate(120%);
+        -webkit-backdrop-filter: blur(10px) saturate(120%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    /* — Eliminar fondo oscuro en barra superior principal — */
+    header[data-testid="page-header"] .from-bg-100.via-bg-100{
+        background: #0000;
+    }
+    
+    /* ── Fondos, input y menus aero glass ──────────────────────────────── */
+    .bg-bg-000{
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+    }
+    
+    /*
+    .from-bg-300{
+        border-radius: 10px;
+    }
+    */
+    
+    /* ── Botones de abajo ──────────────────────────────── */
+    li[role="presentation"] button{
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+        border-radius: 10px;
+    }
+    
+    /* Flecha abajo */
+    button[aria-label="Scroll to bottom"]{
+        background: #00000042;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+        border-radius: 10px;
+    }
+    
+    /* ── Lateral izquierdo ──────────────────────────────── */
+    .shrink-0 .bg-bg-100{
+        background: linear-gradient(rgba(3, 25, 49, .5), rgba(39, 26, 0, .5)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+    }
+    
+    /* ── Nota pequeña abajo ──────────────────────────────── */
+    div[role="note"]{
+    background: radial-gradient(
+        circle at center,
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, .75) 50%,
+        rgba(0, 0, 0, 0) 75%
+    );
+    }
+    
+    /* ── Boton seleccionado en listas ──────────────────────────────── */ 
+    
+    ul .bg-bg-300 {
+        background: linear-gradient(to bottom, #7775, #dfdfdf55 50%, #81818155 50%, #7b7b7b55);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #fff5;
+    }
+    
+    .hover\:bg-bg-200:hover {
+        background: linear-gradient(to bottom, #7773, #dfdfdf30 50%, #81818117 50%, #7b7b7b2b);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #ffffff2b;
+    }
+    
+    .\!bg-bg-300 {
+            background: linear-gradient(to bottom, #7775, #dfdfdf55 50%, #81818155 50%, #7b7b7b55);
+            text-decoration: none;
+            outline: solid thin rgba(0, 0, 0, .5);
+            box-shadow: inset 0 0 0 1px #fff5;
+    }
+    
+    /* ── Hover para botones  ──────────────────────────────── */ 
+    ._ghost_10ocf_96:hover:not(:disabled):not(:active):not([aria-expanded=true]):before {
+        background: linear-gradient(to bottom, #7773, #dfdfdf30 50%, #81818117 50%, #7b7b7b2b);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #ffffff2b;
+    }
+    
+    /* ── Boton de guardar ──────────────────────────────── */ 
+    button[type="submit"]._fill_10ocf_9:before {
+        background: linear-gradient(to bottom, #d3d3d3, #ffffffd1 50%, #cacacaed 50%, #d5d5d5d1);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #fff5;
+    }
+    
+    /* ── Boton de cancelar ──────────────────────────────── */
+    div[data-user-message-bubble="true"] button[type="button"]._fill_10ocf_9:before {
+        background: linear-gradient(to bottom, #7777772b, #dfdfdf33 50%, #8181812e 50%, #7b7b7b30);
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #ffffff36;
+    }
+    
+    ._secondary_10ocf_72:hover:not(:disabled):before, ._secondary_10ocf_72:active:not(:disabled):before {
+        background: linear-gradient(to bottom, #7777772b, #dfdfdf33 50%, #8181812e 50%, #7b7b7b30);
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #ffffff36;
+    }
+    
+    /* ── Referencias (Links)  ──────────────────────────────── */ 
+    
+    .bg-bg-200 {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+        border-radius: 10px;
+    }
+    
+    /* ── Popup de referencias (links)  ──────────────────────────────── */ 
+    div[data-radix-popper-content-wrapper] .bg-bg-100{
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+    }
+    
+    /* Hover Popup de referencias (links) */
+    .hover\:bg-bg-300:hover {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(135deg, #75757555 70px, transparent 100px), linear-gradient(225deg, #7b7b7b55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #5b5b5b55 44% 45%, #4f4f4f55 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #34343445 56% 56.5%, #52525245 57% 63%, #40404055 67% 69%, #53535355 69.5% 70%, #0002 73.5% 74%, #3335 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #4e4e4e55 90%) 0 / 100vw 100vh no-repeat fixed;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        background-attachment: fixed;
+        backdrop-filter: blur(6px) saturate(120%);
+    }
+    
+    /* ── Hover de menus ──────────────────────────────── */ 
+    /* (normal) */
+    .\[\&\[data-highlighted\]\]\:bg-bg-300[data-highlighted] {
+        background: linear-gradient(to bottom, #7773, #dfdfdf30 50%, #81818117 50%, #7b7b7b2b);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #ffffff2b;
+    }
+    
+    .data-\[highlighted\]\:before\:bg-bg-200[data-highlighted]:before {
+        background: linear-gradient(to bottom, #7773, #dfdfdf30 50%, #81818117 50%, #7b7b7b2b);
+        text-decoration: none;
+        outline: solid thin rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 0 1px #ffffff2b;
+    }
+    
+    /* (color rojo) */
+    .\[\&\[data-highlighted\]\]\:bg-danger-900[data-highlighted] {
+        background: linear-gradient(to bottom, #84161633, #dd292930 50%, #79161617 50%, #8414142b);
+        text-decoration: none;
+        outline: solid thin rgba(37, 6, 6, .5);
+        box-shadow: inset 0 0 0 1px #ff53532b;
+    }
+    
+    /* ── Focus visible  ──────────────────────────────── */ 
+    .focus-visible\:ring-accent-200:focus-visible {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: #e5b03899;
+    }
+    
+    .can-focus:focus-visible, .can-focus-within:focus-within, a:not([role=menuitem]):not(.hide-focus-ring):focus-visible, button:not([role=menuitem]):not(.hide-focus-ring):focus-visible, input:not(.hide-focus-ring):focus-visible, textarea:not(.hide-focus-ring):focus-visible, .peer:focus-visible~.peer\:can-focus {
+        outline: 2px solid #e5b03899;
+        transition: outline .2s ease !important;
+    }
+    
+    /* ── Ventana dialog al ver un PDF o imagen  ──────────────────────────────── */
+    div[role="dialog"]{
+        background: linear-gradient(135deg, #79797955 70px, transparent 100px), linear-gradient(225deg, #7a7a7a55 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #56565655 44% 45%, #59595955 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #6c6c6c45 57% 63%, #78787855 67% 69%, #76767655 69.5% 70%, #0002 73.5% 74%, #3f3f3f55 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #5c5c5c55 90%) 0 / 100vw 100vh no-repeat fixed;
+        backdrop-filter: blur(10px) saturate(120%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 0 rgba(255, 255, 255, 0.2), inset -1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    /* ── Incognito chat  ──────────────────────────────── */
+    .shadow-\[0_0_0_100px_hsl\(var\(--text-000\)\)\] {
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 0 100px hsla(0, 0%, 100%, .9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+}
